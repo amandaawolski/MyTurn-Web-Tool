@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: lightpink;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.main-btn {
+    color: black;
+    font-size: 25px;
+    background-color: deeppink;
+    padding: 7px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sticky-btn {
+    position: fixed;
+    bottom: 10px;
+    left: calc((100% - 225px) / 2);
+    width: 225px;
+    z-index: 9;
+}
+
+#pseudocode .sticky-btn {
+    left: calc((100% - 287px) / 2);
+    width: 287px;
+    display: flex;
+}
+
+#pseudocode .sticky-btn>button:first-child {
+    margin-right: 15px;
+}
+
+.main-title {
+    color: deeppink;
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 30px;
+}
+
+.clearfix {
+    display: block;
+    clear: both;
+    float: none;
+}
+
+body>section {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .main-title {
+    margin-top: 30px;
+}
+
+#home>img,
+#pre-upload>img {
+    max-height: 400px;
+    border: 10px solid black;
+}
+
+#pre-upload>img {
+    margin-bottom: 30px;
+}
+
+#upload,
+#summary {
+    padding-bottom: 90px;
+}
+
+#upload .main-title {
+    margin-bottom: 30px;
+}
+
+.uploads {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.upload-item {
+    padding: 10px 10px 0;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-item:not(:nth-of-type(3n)) {
+    margin-right: 5px;
+}
+
+.upload-item>input[type="file"] {
+    max-width: 165px;
+}
+
+.upload-item>img {
+    max-height: 150px;
+    width: auto;
+    border: 1px dashed deeppink;
+}
+
+.upload-item>div {
+    margin-top: 20px;
+}
+
+.upload-item button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+section>.row {
+    max-width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    border: 2px dashed deeppink;
+    padding: 10px;
+}
+
+section#pseudocode>.row {
+    max-width: 995px;
+}
+
+section>.row:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+section>.row>*:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+section>.row p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+section>.row>div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+section>.row>div:first-child {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+section>.row>div:not(:first-child) {
+    flex-grow: 1;
+}
+
+section#pseudocode>.row>div:not(:first-child) {
+    min-width: calc((100% - 220px) / 2);
+    max-width: calc((100% - 220px) / 2);
+}
+
+section>.row>div>*:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+section>.row>div button {
+    padding: 10px;
+}
+
+section>.row>div>div>img {
+    max-height: 100px;
+}
+
+section>.row textarea,
+section>.row .textarea {
+    min-height: 100px;
+    width: 300px;
+    padding: 10px;
+}
+
+section>.row textarea {
+    height: 100%;
+}
+
+section>.row .textarea {
+    height: auto;
+}
+
+section textarea {
+    background: white;
+}
+
+section .textarea {
+    background: #e9e9ed;
+    text-align: left;
+}
+
+#annotate .edit-frame,
+#annotate .clear-frame {
+    top: 0;
+}
+
+.annots {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.annots-row {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: left;
+}
+
+.annots-row p {
+    margin-bottom: 5px;
+}
+
+.annots-meta {
+    width: 200px;
+    position: relative;
+}
+
+.edit-frame,
+.clear-frame {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.edit-frame,
+.clear-frame {
+    position: absolute;
+}
+
+.edit-frame {
+    right: 0;
+}
+
+.clear-frame {
+    right: 40px;
+}
+
+#pseudocode>a,
+#editor>a {
+    text-decoration: underline;
+    color: black;
+    margin-top: 10px;
+}
+
+#pseudocode>a {
+    margin-bottom: 30px;
+}
+
+.update-frame {
+    margin-top: 15px;
+}
+
+.annots-meta>img {
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+.annots-meta>.textarea {
+    min-height: 100px;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.annots-editor {
+    width: 470px;
+}
+
+.drop-editor {
+    height: calc(100% - 25px);
+    border: 2px dashed deeppink;
+    position: relative;
+    overflow: hidden;
+}
+
+.bi {
+    position: absolute;
+    max-height: 50px;
+}
+
+#editor .bi {
+    cursor: move;
+}
+
+.blocks {
+    padding: 20px;
+    background: lightblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.blocks-group,
+.blocks-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blocks-group button {
+    font-size: 17px;
+    color: white;
+    background: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    max-width: calc((100% - 40px) / 5);
+}
+
+.blocks-group button:hover {
+    background: deeppink;
+    cursor: pointer;
+}
+
+.blocks-group button:not(:last-child),
+.block-items img:not(:last-child) {
+    margin-right: 10px;
+}
+
+.block-items img {
+    max-height: 75px;
+    max-width: 265px;
+    display: none;
+    cursor: move;
+}
+
+.blocks[data-current='0'] img[data-id="0"],
+.blocks[data-current='1'] img[data-id="1"],
+.blocks[data-current='2'] img[data-id="2"],
+.blocks[data-current='3'] img[data-id="3"],
+.blocks[data-current='4'] img[data-id="4"],
+.blocks[data-current='5'] img[data-id="5"],
+.blocks[data-current='6'] img[data-id="6"],
+.blocks[data-current='7'] img[data-id="7"],
+.blocks[data-current='8'] img[data-id="8"],
+.blocks[data-current='9'] img[data-id="9"] {
+    display: inline-block !important;
+}
+
+.blocks[data-current='0'] button[data-id="0"],
+.blocks[data-current='1'] button[data-id="1"],
+.blocks[data-current='2'] button[data-id="2"],
+.blocks[data-current='3'] button[data-id="3"],
+.blocks[data-current='4'] button[data-id="4"],
+.blocks[data-current='5'] button[data-id="5"],
+.blocks[data-current='6'] button[data-id="6"],
+.blocks[data-current='7'] button[data-id="7"],
+.blocks[data-current='8'] button[data-id="8"],
+.blocks[data-current='9'] button[data-id="9"] {
+    background: deeppink !important;
+}
+
+section#summary .row {
+    max-width: 800px;
+    width: 800px;
+}
+
+section#summary .summary-img {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+section#summary .summary-texts {
+    max-width: 230px;
+}
+
+#summary .textarea {
+    width: 230px;
+    min-height: 100px;
+}
+
+#summary .btns {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+}
+
+#summary .btns>*:not(:last-child) {
+    margin-right: 15px;
+}
+
+.glossary-section {
+    text-align: center;
+    padding: 70px;
+}
+
+.glossary-section h1:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+.close-glossary {
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.close-glossary span {
+    line-height: 48px;
+    font-size: 40px;
+    color: deeppink;
+    font-weight: bold;
+}
+
+.close-glossary svg {
+    width: 30px;
+    fill: deeppink;
+    margin-right: 20px;
+}
+
+.confirmation {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background: rgba(249, 175, 186, .95);
+}
+
+.confirmation>div {
+    display: flex;
+    justify-content: center;
+}
+
+.confirmation>div>*:not(:last-child) {
+    margin-right: 15px;
+}
+
+.confirmation button {
+    padding: 10px 45px;
+    background: deeppink;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.makeshift-blocks,
+body[data-conf="0"] .confirmation,
+#editor .annot-texts,
+[data-section="1"] #pre-upload,
+[data-section="1"] #upload,
+[data-section="1"] #annotate,
+[data-section="1"] #pseudocode,
+[data-section="1"] #editor,
+[data-section="1"] #summary,
+[data-section="2"] #home,
+[data-section="2"] #upload,
+[data-section="2"] #annotate,
+[data-section="2"] #pseudocode,
+[data-section="2"] #editor,
+[data-section="2"] #summary,
+[data-section="3"] #home,
+[data-section="3"] #pre-upload,
+[data-section="3"] #annotate,
+[data-section="3"] #pseudocode,
+[data-section="3"] #editor,
+[data-section="3"] #summary,
+[data-section="4"] #home,
+[data-section="4"] #pre-upload,
+[data-section="4"] #upload,
+[data-section="4"] #pseudocode,
+[data-section="4"] #editor,
+[data-section="4"] #summary,
+[data-section="5"] #home,
+[data-section="5"] #pre-upload,
+[data-section="5"] #upload,
+[data-section="5"] #annotate,
+[data-section="5"] #editor,
+[data-section="5"] #summary,
+[data-section="6"] #home,
+[data-section="6"] #pre-upload,
+[data-section="6"] #upload,
+[data-section="6"] #annotate,
+[data-section="6"] #pseudocode,
+[data-section="6"] #summary,
+[data-section="7"] #home,
+[data-section="7"] #pre-upload,
+[data-section="7"] #upload,
+[data-section="7"] #annotate,
+[data-section="7"] #pseudocode,
+[data-section="7"] #editor {
+    display: none !important;
+}
+
+@media screen and (min-width: 701px) {
+    body>section {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main-title {
+        padding: 0 50px;
+    }
+}

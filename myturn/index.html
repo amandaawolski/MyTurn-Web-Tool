@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyTurn</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+
+<body data-section="1" data-conf="0">
+    <section id="home">
+        <img src="assets/images/clickbot-logo.jpg">
+        <h1 class="main-title">Ready to play with ClicBot?</h1>
+        <button class="main-btn">Let's Start</button>
+    </section>
+    <section id="pre-upload">
+        <h1 class="main-title">To start, upload your storyboard frames.</h1>
+        <img src="assets/images/uploadimage.jpg">
+        <div class="clearfix"></div>
+        <button class="main-btn">Continue</button>
+    </section>
+    <section id="upload">
+        <h1 class="main-title">Upload Frames</h1>
+        <div class="uploads" data-available="0">
+            <div class="upload-item" data-annot="" data-pseudo="">
+                <input type="file" class="upload-frame" accept="image/*">
+                <div>
+                    <button class="secondary-btn clear-btn">Clear Image</button>
+                    <button class="secondary-btn next-frame-btn">Upload another</button>
+                </div>
+                <div class="makeshift-blocks"></div>
+            </div>
+        </div>
+        <button class="main-btn finish-upload-btn sticky-btn">Finish uploading</button>
+    </section>
+    <section id="annotate">
+        <h1 class="main-title">Great! Now let's annotate your storyboard.</h1>
+        <button class="main-btn annotate-next-btn sticky-btn">Next</button>
+    </section>
+    <section id="pseudocode">
+        <h1 class="main-title">Now let's turn your annotations into pseudocode.</h1>
+        <a href="pseudocode-glossary.htm" target="_blank">Pseudocode Glossary</a>
+        <div class="sticky-btn">
+            <button class="main-btn pseudocode-back-btn">Back</button>
+            <button class="main-btn pseudocode-next-btn">Save and Next</button>
+        </div>
+    </section>
+    <section id="editor">
+        <h1 class="main-title">Time to build your code for ClicBot!</h1>
+        <a href="block-glossary.htm" target="_blank">Block Code Glossary</a>
+        <div class="annots"></div>
+        <div class="btns">
+            <button style="margin-right: 10px;" class="main-btn editor-back-btn">Back</button>
+            <button class="main-btn editor-next-btn">Finish</button>
+        </div>
+        <div class="blocks">
+            <div class="blocks-group"></div>
+            <div class="block-items"></div>
+        </div>
+    </section>
+    <section id="summary">
+        <h1 class="main-title">Summary Page</h1>
+        <div class="btns">
+            <button class="main-btn edit-annots-btn">Edit Annotatiobs</button>
+            <button class="main-btn edit-pseudo-btn">Edit Pseudocodes</button>
+            <button class="main-btn edit-blocks-btn">Edit Block Codes</button>
+            <button class="main-btn start-over-btn">Start Over</button>
+        </div>
+    </section>
+    <section class="confirmation">
+        <h1 class="main-title">Are you sure?</h1>
+        <div>
+            <button class="conf-no-btn">No</button>
+            <button class="conf-yes-btn">Yes</button>
+        </div>
+    </section>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
